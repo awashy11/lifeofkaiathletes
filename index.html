@@ -97,6 +97,12 @@ details p{color:var(--muted);margin:12px 0 0;max-width:680px}
 .final .cta{justify-content:center}
 footer{background:var(--night);color:#8c93bd;font-size:.85rem;padding:34px 0 40px}
 footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+.navcta{display:flex;align-items:center;gap:10px}
+.navtel{width:40px;height:40px;border-radius:50%;border:1px solid rgba(244,241,234,.4);display:grid;place-items:center;color:var(--onnight);transition:background .2s}
+.navtel:hover{background:rgba(255,255,255,.1)}
+.navtel svg{width:18px;height:18px;fill:currentColor}
+.btn.tel{display:inline-flex;align-items:center;gap:10px}
+.btn.tel svg{width:18px;height:18px;fill:currentColor;flex:none}
 .alt{margin:26px auto 0;font-size:.92rem;opacity:.85;max-width:560px}
 .alt a,.alt button{color:#9fb4ff;font:inherit;background:none;border:0;padding:0;cursor:pointer;text-decoration:underline}
 .alt .addr{display:block;margin-top:8px;color:var(--onnight);user-select:all}
@@ -108,7 +114,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
   <div class="wrap">
     <a class="logo" href="#top">Life of Kai</a>
     <div class="links"><a href="#method">The method</a><a href="#whare">Whare Tapa Whā</a><a href="#how">How it works</a><a href="#faq">FAQ</a></div>
-    <a class="btn" href="mailto:alexdickienz@gmail.com?cc=amy@onmark.co.nz&amp;subject=Life%20of%20Kai%20Athlete%20enquiry">Book a call</a>
+    <div class="navcta"><a class="navtel" href="tel:+642102561125" aria-label="Call 021 025 61125"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.6a1 1 0 0 1-.25 1z"/></svg></a><a class="btn" href="mailto:alexdickienz@gmail.com?cc=amy@onmark.co.nz&amp;subject=Life%20of%20Kai%20Athlete%20enquiry">Book a call</a></div>
   </div>
 </nav>
 
@@ -194,7 +200,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
     <div class="cards steps">
       <div class="card"><span class="num">Step 1</span><h3>Discovery call</h3><p>We talk through your sport, schedule and where you feel the pressure most.</p></div>
       <div class="card"><span class="num">Step 2</span><h3>Your personal plan</h3><p>A breathwork protocol and a kai plan shaped around your training and travel.</p></div>
-      <div class="card"><span class="num">Step 3</span><h3>Practise &amp; refine</h3><p>Regular sessions and check-ins so it becomes habit, not another thing to remember.</p></div>
+      <div class="card"><span class="num">Step 3</span><h3>Your 28-day practice</h3><p>Schedule regular sessions and check-ins for 28 days or, until the new habit sticks.</p></div>
     </div>
   </div>
 </section>
@@ -216,9 +222,9 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
     <p>Start with one conversation. We’ll look at where breath and kai can make the biggest difference for you.</p>
     <div class="cta">
       <a class="btn" href="mailto:alexdickienz@gmail.com?cc=amy@onmark.co.nz&amp;subject=Life%20of%20Kai%20Athlete%20enquiry">Book a discovery call</a>
+      <a class="btn ghost tel" href="tel:+642102561125" aria-label="Call 021 025 61125"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.6a1 1 0 0 1-.25 1z"/></svg>Call 021 025 61125</a>
     </div>
-    <p class="alt">No mail app set up? Open a draft in <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=alexdickienz@gmail.com&amp;cc=amy@onmark.co.nz&amp;su=Life%20of%20Kai%20Athlete%20enquiry" target="_blank" rel="noopener">Gmail</a> or <a href="https://outlook.office.com/mail/deeplink/compose?to=alexdickienz@gmail.com&amp;cc=amy@onmark.co.nz&amp;subject=Life%20of%20Kai%20Athlete%20enquiry" target="_blank" rel="noopener">Outlook</a>, or <button type="button" id="copy">copy the email address</button>.
-      <span class="addr" id="addr">alexdickienz@gmail.com</span><span role="status" id="copied"></span></p>
+    <p class="alt">No mail app set up? Open a draft in <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=alexdickienz@gmail.com&amp;cc=amy@onmark.co.nz&amp;su=Life%20of%20Kai%20Athlete%20enquiry" target="_blank" rel="noopener">Gmail</a> or <a href="https://outlook.office.com/mail/deeplink/compose?to=alexdickienz@gmail.com&amp;cc=amy@onmark.co.nz&amp;subject=Life%20of%20Kai%20Athlete%20enquiry" target="_blank" rel="noopener">Outlook</a>, or <button type="button" id="copy">copy the email address</button>.<span role="status" id="copied"></span></p>
   </div>
 </section>
 
@@ -228,20 +234,18 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
 
 <script>
 (function(){
-  var b=document.getElementById('copy'),s=document.getElementById('copied'),a=document.getElementById('addr');
+  var b=document.getElementById('copy'),s=document.getElementById('copied'),t='alexdickienz@gmail.com';
   if(!b)return;
   b.addEventListener('click',function(){
-    var t=a.textContent.trim();
-    function done(ok){s.textContent=ok?' Copied \u2713':' Select the address above to copy it.';}
+    function done(ok){s.textContent=ok?' Copied \u2713':' Copy failed. Use the links above.';}
     try{
       if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(function(){done(true)},function(){fallback()});}
       else{fallback();}
     }catch(e){fallback();}
     function fallback(){
       try{
-        var r=document.createRange();r.selectNodeContents(a);
-        var sel=window.getSelection();sel.removeAllRanges();sel.addRange(r);
-        done(document.execCommand('copy'));
+        var x=document.createElement('textarea');x.value=t;x.style.position='fixed';x.style.opacity='0';document.body.appendChild(x);x.select();
+        var ok=document.execCommand('copy');document.body.removeChild(x);done(ok);
       }catch(e){done(false);}
     }
   });
