@@ -97,6 +97,9 @@ details p{color:var(--muted);margin:12px 0 0;max-width:680px}
 .final .cta{justify-content:center}
 footer{background:var(--night);color:#8c93bd;font-size:.85rem;padding:34px 0 40px}
 footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+.alt{margin:26px auto 0;font-size:.92rem;opacity:.85;max-width:560px}
+.alt a,.alt button{color:#9fb4ff;font:inherit;background:none;border:0;padding:0;cursor:pointer;text-decoration:underline}
+.alt .addr{display:block;margin-top:8px;color:var(--onnight);user-select:all}
 </style>
 </head>
 <body>
@@ -214,6 +217,8 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
     <div class="cta">
       <a class="btn" href="mailto:alexdickienz@gmail.com?cc=amy@onmark.co.nz&amp;subject=Life%20of%20Kai%20Athlete%20enquiry">Book a discovery call</a>
     </div>
+    <p class="alt">No mail app set up? Open a draft in <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=alexdickienz@gmail.com&amp;cc=amy@onmark.co.nz&amp;su=Life%20of%20Kai%20Athlete%20enquiry" target="_blank" rel="noopener">Gmail</a> or <a href="https://outlook.office.com/mail/deeplink/compose?to=alexdickienz@gmail.com&amp;cc=amy@onmark.co.nz&amp;subject=Life%20of%20Kai%20Athlete%20enquiry" target="_blank" rel="noopener">Outlook</a>, or <button type="button" id="copy">copy the email address</button>.
+      <span class="addr" id="addr">alexdickienz@gmail.com</span><span role="status" id="copied"></span></p>
   </div>
 </section>
 
@@ -221,5 +226,26 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
   <div class="wrap"><span>© 2026 Life of Kai</span><span>“The stars may guide us, but healing happens in how we live each day.”</span></div>
 </footer>
 
+<script>
+(function(){
+  var b=document.getElementById('copy'),s=document.getElementById('copied'),a=document.getElementById('addr');
+  if(!b)return;
+  b.addEventListener('click',function(){
+    var t=a.textContent.trim();
+    function done(ok){s.textContent=ok?' Copied \u2713':' Select the address above to copy it.';}
+    try{
+      if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(function(){done(true)},function(){fallback()});}
+      else{fallback();}
+    }catch(e){fallback();}
+    function fallback(){
+      try{
+        var r=document.createRange();r.selectNodeContents(a);
+        var sel=window.getSelection();sel.removeAllRanges();sel.addRange(r);
+        done(document.execCommand('copy'));
+      }catch(e){done(false);}
+    }
+  });
+})();
+</script>
 </body>
 </html>
